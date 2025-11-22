@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<title>KALKULATOR</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 25px;
+    background: #fff;
+    color: #4b2a2a;
+  }
+  /* Box container border mirip window */
+  .container {
+    width: 520px;
+    margin: 0 auto;
+    border: 1px solid #666;
+    padding: 10px 40px 40px 40px;
+    box-sizing: border-box;
+  }
+  /* Judul "Kalkulator Sederhana" efek shadow + posisi kiri atas */
+  .judul-container {
+    position: relative;
+    margin-bottom: 35px;
+  }
+  .judul-berat {
+    font-weight: bold;
+    font-size: 22px;
+    color: #7a2020;
+    text-shadow: 2px 2px 3px #d0d0d0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .judul-ringan {
+    font-weight: bold;
+    font-size: 18px;
+    color: #244070;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 10px;
+    top: 28px;
+  }
+
+  /* Tulisan Selamat Mencoba, Nilai I, Nilai II */
+  .welcome {
+    color: #6d3f24;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .labels-container {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  /* Form gaya horizontal */
+  form {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  input[type=number] {
+    width: 165px;
+    height: 25px;
+    font-size: 14px;
+    padding: 2px 5px;
+  }
+  select {
+    width: 40px;
+    height: 31px;
+    font-size: 16px;
+    padding-left: 9px;
+    cursor: pointer;
+  }
+  input[type=submit] {
+    height: 31px;
+    font-size: 13px;
+    padding: 0 12px;
+    cursor: pointer;
+  }
+
+  /* Footer text */
+  .footer {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #153866;
+    font-size: 14px;
+  }
+
+  /* Result margin and color like image */
+  #result {
+    color: #6d3f24;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+</style>
+</head>
+<body>
+
+<div class="container" role="main" aria-label="Kalkulator Operasi Aritmatika Sederhana">
+  <div class="judul-container" aria-hidden="true">
+    <div class="judul-berat">Kalkulator</div>
+    <div class="judul-ringan">Sederhana</div>
+  </div>
+
+  <div class="welcome">Selamat Mencoba</div>
+
+  <div class="labels-container">
+    <div>Nilai I</div>
+    <div>Nilai II</div>
+  </div>
+
+  <form id="calcForm" aria-describedby="directions" novalidate>
+    <input type="number" id="nilai1" name="nilai1" aria-label="Nilai pertama" required step="any" />
+    <select id="operator" name="operator" aria-label="Pilih operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="^">^</option>
+    </select>
+    <input type="number" id="nilai2" name="nilai2" aria-label="Nilai kedua" required step="any" />
+    <input type="submit" value="submit" aria-label="Submit kalkulator" />
+  </form>
+
+  <div id="result" aria-live="polite" aria-atomic="true"></div>
+
+  <div class="footer">
+    Created by IRGI LUSIYANA, ilusiyana799@yahoo.com
+  </div>
+</div>
+
+<script>
+  document.getElementById('calcForm').addEventListener('submit', function(ev) {
+    ev.preventDefault();
+
+    let nilai1 = parseFloat(document.getElementById('nilai1').value);
+    let nilai2 = parseFloat(document.getElementById('nilai2').value);
+    let operator = document.getElementById('operator').value;
+    let hasil;
+
+    if (isNaN(nilai1) || isNaN(nilai2)) {
+      hasil = "Mohon masukkan nilai yang valid!";
+    } else {
+      switch(operator) {
+        case '+': hasil = nilai1 + nilai2; break;
+        case '-': hasil = nilai1 - nilai2; break;
+        case '*': hasil = nilai1 * nilai2; break;
+        case '/': 
+          hasil = (nilai2 !== 0) ? (nilai1 / nilai2) : "Tidak bisa dibagi dengan nol"; 
+          break;
+        case '^': hasil = Math.pow(nilai1, nilai2); break;
+        default: hasil = "Operator tidak valid";
+      }
+    }
+
+    document.getElementById('result').textContent = "Hasil : " + hasil;
+  });
+</script>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+    </div>
+</body>
+</html>

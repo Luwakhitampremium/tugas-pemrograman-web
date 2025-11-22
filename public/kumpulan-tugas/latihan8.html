@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Pendaftaran</title>
+</head>
+<body>
+    <h1>Form Pendaftaran</h1>
+    <form>
+        <table>
+            <tr>
+                <td>NIM</td>
+                <td>: <input type="text" name="nim" size="15"></td>
+            </tr>
+            <tr>
+                <td>NAMA</td>
+                <td>: <input type="text" name="nama" size="25"></td>
+            </tr>
+            <tr>
+                <td>JENIS KELAMIN</td>
+                <td>: 
+                    <input type="radio" name="jkel" value="Pria"> Pria 
+                    <input type="radio" name="jkel" value="Wanita"> Wanita
+                </td>
+            </tr>
+            <tr>
+                <td>AGAMA</td>
+                <td>: 
+                    <select name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Katholik">Katholik</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>STATUS</td>
+                <td>: 
+                    <input type="radio" name="status" value="Kawin"> Kawin 
+                    <input type="radio" name="status" value="Belum Kawin"> Belum Kawin
+                </td>
+            </tr>
+            <tr>
+                <td>JURUSAN</td>
+                <td>: 
+                    <select name="jurusan">
+                        <option value="Hukum">Hukum</option>
+                        <option value="Teknik Informatika">Teknik Informatika</option>
+                        <option value="Manajemen">Manajemen</option>
+                        <option value="Ekonomi">Ekonomi</option>
+                        <option value="Sastra">Sastra</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Ket:</td>
+                <td><textarea name="ket" rows="4" cols="30"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+            <input type="submit" value="kirim">
+            <input type="reset" value="ulang">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+    </div>
+</body>
+</html>

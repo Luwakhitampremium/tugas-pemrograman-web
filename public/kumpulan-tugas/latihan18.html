@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Latihan Dengan Objek Radio</title>
+</head>
+<body>
+
+<script language="JavaScript">
+function radio_box(form)
+{
+    var ket = "";
+
+    if (form.gender.value == "wanita") {
+        ket = "Wanita";
+    } else if (form.gender.value == "pria") {
+        ket = "Pria";
+    } else {
+        ket = "Gak Jelas";
+    }
+
+    alert("Anda adalah seorang " + ket);
+}
+</script>
+
+<h1>Memasukkan Data Dengan Objek Radio</h1><hr>
+
+<form>
+    <p>
+        <input type="radio" value="wanita" name="gender"> Wanita<br>
+        <input type="radio" value="pria" name="gender"> Pria
+    </p>
+
+    <hr>
+
+    <p>
+        <input type="button" value="CONFIRM" onclick="radio_box(this.form)">
+        <input type="reset" value="RESET">
+    </p>
+</form>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+    </div>
+</body>
+</html>

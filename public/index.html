@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portofolio | IRGI LUSIYANA PURWANTO</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portofolio pribadi berisi biodata dan kumpulan tugas yang sudah terselesaikan."
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- style.css kalau kamu punya custom CSS (misalnya animasi hamburger) -->
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <!-- HEADER -->
+  <header
+    class="sticky top-0 z-20 border-b border-slate-800/40 bg-slate-950/80 backdrop-blur-xl"
+  >
+    <div
+      class="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 md:py-4"
+    >
+      <div class="flex items-center gap-3">
+        <div
+          class="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 via-sky-500 to-sky-700 text-base font-bold shadow-[0_10px_25px_rgba(56,189,248,0.7)]"
+        >
+          N
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-semibold tracking-wide">IRGI LUSIYANA PURWANTO</span>
+          <span class="text-xs text-slate-400">Front-End Developer</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <!-- NAV DESKTOP -->
+        <nav
+          id="main-nav"
+          class="hidden gap-5 text-sm text-slate-400 md:flex"
+        >
+          <a
+            href="#biodata"
+            class="relative py-1 transition-colors hover:text-slate-100"
+          >
+            Biodata
+          </a>
+          <a
+            href="#tugas"
+            class="relative py-1 transition-colors hover:text-slate-100"
+          >
+            Tugas
+          </a>
+          <a href="kumpulan-tugas/tugas.html"  
+             class="relative py-1 transition-colors hover:text-slate-100"
+             >
+             kumpulan tugas</a>
+          <a
+            href="#kontak"
+            class="relative py-1 transition-colors hover:text-slate-100"
+          >
+            Kontak
+          </a>
+        </nav>
+
+        <!-- NAV MOBILE BUTTON -->
+        <button
+          class="nav-toggle flex h-9 w-9 items-center justify-center rounded-full border border-slate-600 bg-slate-900/90 md:hidden"
+          aria-label="Toggle navigation"
+        >
+          <span class="block h-[2px] w-5 rounded-full bg-slate-100"></span>
+          <span class="mt-[3px] block h-[2px] w-5 rounded-full bg-slate-100"></span>
+          <span class="mt-[3px] block h-[2px] w-5 rounded-full bg-slate-100"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- NAV MOBILE DROPDOWN -->
+    <nav
+      id="main-nav-mobile"
+      class="mx-auto hidden max-w-5xl flex-col gap-1 px-4 pb-3 md:hidden"
+    >
+      <div
+        id="main-nav-mobile-list"
+        class="flex flex-col gap-1 rounded-2xl border border-slate-700 bg-slate-900/95 px-4 py-3 text-sm text-slate-200 shadow-2xl"
+      >
+        <a href="#biodata" class="rounded-lg px-1.5 py-1.5 hover:bg-slate-800/80"
+          >Biodata</a
+        >
+        <a href="#tugas" class="rounded-lg px-1.5 py-1.5 hover:bg-slate-800/80"
+          >Tugas</a
+        >
+        <a href="#kontak" class="rounded-lg px-1.5 py-1.5 hover:bg-slate-800/80"
+          >Kontak</a
+        >
+      </div>
+    </nav>
+  </header>
+
+  <main
+    class="mx-auto flex max-w-5xl flex-col gap-10 px-4 pb-10 pt-6 md:pt-8 lg:pt-10"
+  >
+    <!-- HERO / BIODATA -->
+    <section
+      id="biodata"
+      class="grid gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]"
+    >
+      <!-- LEFT: TEXT -->
+      <div
+        class="relative overflow-hidden rounded-3xl border border-slate-600/40 bg-gradient-to-br from-slate-900/95 via-slate-900/95 to-slate-950/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.75)]"
+      >
+        <div
+          class="mb-3 inline-flex items-center gap-2 rounded-full border border-sky-400/60 bg-sky-500/10 px-3 py-1 text-[11px] text-sky-300"
+        >
+          <span
+            class="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_0_4px_rgba(52,211,153,0.35)]"
+          ></span>
+          Terbuka untuk proyek & kolaborasi
+        </div>
+
+        <h1
+          class="mb-2 text-[26px] font-semibold leading-tight md:text-[30px]"
+        >
+          Halo, saya
+          <span
+            class="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-transparent"
+            >IRGI LUSIYANA PURWANTO</span
+          >
+        </h1>
+        <p class="mb-4 max-w-xl text-xs leading-relaxed text-slate-400">
+          Seorang front-end developer yang fokus pada pembuatan landing page,
+          dashboard, dan komponen UI yang konsisten, bersih, dan responsif. Di
+          bawah ini adalah kumpulan tugas yang sudah saya selesaikan.
+        </p>
+
+        <div
+          class="mb-4 grid gap-2 text-[11px] sm:grid-cols-2 md:text-[11px]"
+        >
+          <div
+            class="rounded-2xl border border-indigo-700/70 bg-slate-900/90 px-3 py-2"
+          >
+            <div class="text-[10px] text-slate-400">Lokasi</div>
+            <div class="font-medium text-slate-100">Kota, Negara</div>
+          </div>
+          <div
+            class="rounded-2xl border border-indigo-700/70 bg-slate-900/90 px-3 py-2"
+          >
+            <div class="text-[10px] text-slate-400">Fokus Belajar</div>
+            <div class="font-medium text-slate-100">
+              HTML • CSS • JavaScript
+            </div>
+          </div>
+          <div
+            class="rounded-2xl border border-indigo-700/70 bg-slate-900/90 px-3 py-2"
+          >
+            <div class="text-[10px] text-slate-400">Pengalaman</div>
+            <div class="font-medium text-slate-100">+10 Tugas Selesai</div>
+          </div>
+          <div
+            class="rounded-2xl border border-indigo-700/70 bg-slate-900/90 px-3 py-2"
+          >
+            <div class="text-[10px] text-slate-400">Kontak</div>
+            <div class="font-medium text-slate-100">
+              Ilusiyana799@mail.com
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onclick="document.getElementById('tugas').scrollIntoView({behavior:'smooth'})"
+            class="inline-flex items-center gap-2 rounded-full border border-sky-400/80 bg-gradient-to-r from-sky-400 to-sky-500 px-4 py-2 text-xs font-medium text-slate-950 shadow-[0_12px_30px_rgba(56,189,248,0.6)] transition hover:-translate-y-[1px] hover:shadow-[0_18px_40px_rgba(56,189,248,0.8)]"
+          >
+            Lihat Tugas Selesai
+          </button>
+          <button
+            type="button"
+            onclick="document.getElementById('kontak').scrollIntoView({behavior:'smooth'})"
+            class="inline-flex items-center gap-2 rounded-full border border-slate-500 bg-slate-900/90 px-4 py-2 text-xs text-slate-100 shadow-[0_10px_25px_rgba(15,23,42,0.8)] transition hover:-translate-y-[1px] hover:bg-slate-900"
+          >
+            Hubungi Saya
+          </button>
+        </div>
+      </div>
+
+      <!-- RIGHT: PHOTO CARD -->
+      <div class="flex items-center justify-center">
+        <div
+          class="relative h-64 w-52 rounded-[26px] bg-gradient-to-br from-sky-500 to-slate-900 p-2 shadow-[0_22px_45px_rgba(15,23,42,1)]"
+        >
+          <div
+            class="flex h-full flex-col items-center gap-3 rounded-[22px] border border-slate-500/70 bg-gradient-to-b from-slate-950 to-slate-900 px-4 pt-5 pb-4"
+          >
+            <div
+              class="flex h-20 w-20 items-center justify-center rounded-full border-4 border-sky-400/90 bg-gradient-to-br from-sky-400 via-emerald-400 to-slate-900 text-3xl font-bold text-slate-900 shadow-[0_16px_35px_rgba(15,23,42,0.9)]"
+            >
+              N
+            </div>
+            <div class="text-sm font-semibold text-center">IRGI LUSIYANA PURWANTO</div>
+            <div class="text-[11px] text-slate-400 text-center">
+              Front-End / UI Dev
+            </div>
+            <div class="flex flex-wrap justify-center gap-1.5 text-[10px]">
+              <span
+                class="rounded-full border border-slate-500/70 bg-slate-900/90 px-2 py-1"
+                >Pixel-perfect layout</span
+              >
+              <span
+                class="rounded-full border border-slate-500/70 bg-slate-900/90 px-2 py-1"
+                >Responsive</span
+              >
+              <span
+                class="rounded-full border border-slate-500/70 bg-slate-900/90 px-2 py-1"
+                >Clean design</span
+              >
+            </div>
+          </div>
+          <div
+            class="absolute inset-x-1 bottom-2 flex items-center justify-center"
+          >
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-sky-400/80 bg-slate-900/95 px-3 py-1 text-[10px] text-slate-100"
+            >
+              <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+              +10 tugas frontend terselesaikan
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TUGAS -->
+    <section id="tugas" class="space-y-4">
+      <div>
+        <h2 class="text-lg font-semibold">Tugas Terselesaikan</h2>
+        <p class="text-sm text-slate-400">
+          Beberapa tugas dan mini project yang sudah saya kerjakan. Setiap kartu
+          bisa diarahkan ke demo online atau repository kode, dan file tugas
+          bisa di-download.
+        </p>
+      </div>
+
+      <!-- FORM TAMBAH TUGAS -->
+      <form
+        id="task-form"
+        enctype="multipart/form-data"
+        class="space-y-3 rounded-3xl border border-sky-400/30 bg-slate-900/95 p-5 shadow-[0_18px_45px_rgba(0,0,0,0.7)]"
+      >
+        <h3
+          class="bg-gradient-to-r from-sky-400 to-emerald-400 bg-clip-text text-sm font-semibold text-transparent"
+        >
+          Tambah Tugas Baru
+        </h3>
+
+        <div class="grid gap-3 md:grid-cols-2">
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-title"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >Judul Tugas</label
+            >
+            <input
+              type="text"
+              id="task-title"
+              name="title"
+              placeholder="Contoh: Landing Page Portofolio"
+              required
+              class="rounded-xl border border-sky-400/40 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none transition focus:border-sky-400 focus:shadow-[0_0_0_1px_rgba(56,189,248,0.7),0_0_10px_rgba(56,189,248,0.5)]"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-tech"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >Teknologi</label
+            >
+            <input
+              type="text"
+              id="task-tech"
+              name="tech"
+              placeholder="HTML • CSS • JS"
+              required
+              class="rounded-xl border border-sky-400/40 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none transition focus:border-sky-400 focus:shadow-[0_0_0_1px_rgba(56,189,248,0.7),0_0_10px_rgba(56,189,248,0.5)]"
+            />
+          </div>
+        </div>
+
+        <div class="grid gap-3 md:grid-cols-2">
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-year"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >Tahun</label
+            >
+            <input
+              type="number"
+              id="task-year"
+              name="year"
+              placeholder="2025"
+              required
+              class="rounded-xl border border-sky-400/40 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none transition focus:border-sky-400 focus:shadow-[0_0_0_1px_rgba(56,189,248,0.7),0_0_10px_rgba(56,189,248,0.5)]"
+            />
+          </div>
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-tags"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >Tag (opsional)</label
+            >
+            <input
+              type="text"
+              id="task-tags"
+              name="tags"
+              placeholder="Responsive, Grid, UI"
+              class="rounded-xl border border-sky-400/40 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none transition focus:border-sky-400 focus:shadow-[0_0_0_1px_rgba(56,189,248,0.7),0_0_10px_rgba(56,189,248,0.5)]"
+            />
+          </div>
+        </div>
+
+        <div class="grid gap-3 md:grid-cols-2">
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-demo-url"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >Link Demo / Repo</label
+            >
+            <input
+              type="url"
+              id="task-demo-url"
+              name="demo_url"
+              placeholder="https://..."
+              class="rounded-xl border border-sky-400/40 bg-slate-950/80 px-3 py-2 text-xs text-slate-100 outline-none transition focus:border-sky-400 focus:shadow-[0_0_0_1px_rgba(56,189,248,0.7),0_0_10px_rgba(56,189,248,0.5)]"
+            />
+          </div>
+
+          <div class="flex flex-col gap-1">
+            <label
+              for="task-file"
+              class="text-[11px] font-medium tracking-wide text-slate-400"
+              >File Tugas (upload)</label
+            >
+            <input
+              type="file"
+              id="task-file"
+              name="task_file"
+              accept=".zip,.rar,.pdf,.doc,.docx,.ppt,.pptx,.xlsx,.txt"
+              class="text-[11px] text-slate-300 file:mr-3 file:rounded-full file:border file:border-sky-400/70 file:bg-slate-900/90 file:px-3 file:py-1.5 file:text-xs file:text-sky-300 file:outline-none file:transition hover:file:bg-slate-900"
+            />
+            <span class="text-[10px] text-slate-500">
+              File akan disimpan di server dan bisa di-download kembali.
+            </span>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="mt-2 inline-flex items-center rounded-full border border-sky-400/80 bg-gradient-to-r from-sky-400 to-sky-500 px-4 py-2 text-xs font-medium text-slate-950 shadow-[0_12px_28px_rgba(56,189,248,0.45)] transition hover:-translate-y-[1px] hover:shadow-[0_16px_36px_rgba(56,189,248,0.7)]"
+        >
+          Tambah Tugas
+        </button>
+
+        <p id="form-status" class="text-[11px] text-slate-400"></p>
+      </form>
+
+      <!-- GRID TUGAS (diisi via script.js dari /api/tasks) -->
+      <div
+        id="tasks-grid"
+        class="grid gap-4 md:grid-cols-2 lg:grid-cols-3"
+      ></div>
+    </section>
+
+    <!-- KONTAK -->
+    <section id="kontak" class="space-y-2">
+      <h2 class="text-lg font-semibold">Kontak</h2>
+      <p class="text-sm text-slate-400">
+        Tertarik bekerja sama, memberikan masukan, atau ingin melihat detail
+        tugas tertentu? Silakan hubungi saya.
+      </p>
+      <p class="text-sm">
+        Email:
+        <a
+          href="mailto:emailkamu@mail.com"
+          class="text-sky-400 underline underline-offset-2"
+          >Ilusiyana799@mail.com</a
+        >
+      </p>
+      <p class="text-sm">
+        GitHub / Portfolio:
+        <a
+          href="#"
+          class="text-sky-400 underline underline-offset-2"
+          >github.com/username</a
+        >
+      </p>
+    </section>
+  </main>
+
+  <footer
+    class="border-t border-slate-900/90 pb-6 pt-4 text-center text-[11px] text-slate-500"
+  >
+    © 2025 IRGI LUSIYANA — Dibuat dengan HTML, Tailwind CSS & JavaScript.
+  </footer>
+
+  <!-- Script frontend (AJAX ke /api/tasks) -->
+  <script src="/script.js"></script>
+</body>
+</html>

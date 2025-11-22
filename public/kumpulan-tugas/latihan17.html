@@ -1,0 +1,44 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<script language="JavaScript" type="text/javascript">
+
+var myName = prompt("Please enter your name : ", "");
+var nb = prompt("Please nama barang : ");
+var hs = prompt("Please harga satuan : ");
+var jb = prompt("Please jumlah barang : ");
+
+hb = hs * jb;
+
+if (hb > 500000) {
+    disc = (5/100 * hb);
+}
+else if (hb > 300000) {
+    disc = (2/100 * hb);
+}
+else {
+    disc = (0.5/100 * hb);
+}
+
+hbb = hb - disc;
+
+document.write("<font size='5' color='blue'><h2 align='center'>Aplikasi Penghitung Harga Barang</h2></font><br>");
+
+document.write("Nama Barang : " + nb + "<br>");
+document.write("Harga Satuan : " + hs + "<br>");
+document.write("Jumlah Barang : " + jb + "<br>");
+document.write("Harga Barang : " + hb + "<br>");
+document.write("Diskon : " + disc + "<br>");
+document.write("Harga Bersih : " + hbb + "<br><br>");
+
+document.write("<font size='5' color='red'>Terima Kasih " + myName + "</font>");
+
+</script>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="tugas.html" class="btn-custom">Kembali ke Halaman Daftar Tugas</a>
+    </div>
+</body>
+</html>
