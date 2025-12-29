@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>var n = 5;
+
+// bagian atas
+for (var i = 0; i < n; i++) {
+    var spasi = "";
+    var bintang = "";
+    for (var s = 0; s < n - i - 1; s++) {
+        spasi += " ";
+    }
+    for (var b = 0; b < 2 * i + 1; b++) {
+        bintang += "*";
+    }
+    console.log(spasi + bintang);
+}
+
+// bagian bawah
+for (var i = n - 2; i >= 0; i--) {
+    var spasi = "";
+    var bintang = "";
+    for (var s = 0; s < n - i - 1; s++) {
+        spasi += " ";
+    }
+    for (var b = 0; b < 2 * i + 1; b++) {
+        bintang += "*";
+    }
+    console.log(spasi + bintang);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>var n = 5;
+
+for (var i = 0; i < n; i++) {
+    var spasi = "";
+    var bintang = "";
+
+    // spasi kiri
+    for (var s = 0; s < n - i - 1; s++) {
+        spasi += " ";
+    }
+
+    // jumlah bintang ganjil
+    for (var b = 0; b < 2 * i + 1; b++) {
+        bintang += "*";
+    }
+
+    console.log(spasi + bintang);
+}
+</script>
+    
+</body>
+</html>
